@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Logs</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* White text */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #1e1e1e; /* Slightly lighter dark container */
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ff88; /* Neon green accent */
+      margin-bottom: 1.5rem;
+    }
+
+    .change-logs {
+      background-color: #2a2a2a; /* Darker background for logs */
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .change-logs h2 {
+      color: #00ff88; /* Neon green accent */
+      margin-bottom: 1rem;
+    }
+
+    .change-logs ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .change-logs li {
+      background-color: #1e1e1e; /* Dark background for list items */
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+      border-left: 4px solid #00ff88; /* Neon green accent */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .change-logs li:hover {
+      transform: translateX(5px); /* Slight hover effect */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Update Change Logs</h1>
+    <div class="change-logs">
+      <h2>Latest Updates</h2>
+      <ul id="changeLogList">
+        <li><strong>New GUI:</strong> A modern and sleek design for better user experience.</li>
+        <li><strong>New Buttons:</strong> Added Open and Close File buttons for easier navigation.</li>
+        <li><strong>Save TextBox:</strong> Now you can save your notes directly from the text box.</li>
+        <li><strong>Fixed Change Logs:</strong> Improved the layout and readability of the change logs.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
