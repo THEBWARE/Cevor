@@ -196,7 +196,7 @@
             Loading... Please wait.
         </div>
         <div class="checkbox-container">
-            <input type="checkbox" id="agreeCheckbox" disabled>
+            <input type="checkbox" id="agreeCheckbox">
             <label for="agreeCheckbox">I agree to the <span class="highlight-blue" onclick="openModal()">Terms of Service</span>.</label>
         </div>
     </div>
@@ -246,12 +246,6 @@
         // Open the Terms of Service modal
         function openModal() {
             modal.style.display = "block";
-            setTimeout(() => {
-                agreeCheckbox.disabled = false; // Enable the checkbox after 5 seconds
-                agreeCheckbox.checked = true; // Auto-agree to the ToS
-                closeModal(); // Close the modal
-                simulateKeySystem(); // Automatically click the submit button
-            }, 500); // Wait 5 seconds before auto-agreeing
         }
 
         // Close the modal
@@ -261,6 +255,11 @@
 
         // Simulate the key system process
         function simulateKeySystem() {
+            if (!agreeCheckbox.checked) {
+                errorMessage.style.display = "block"; // Show error if checkbox is not checked
+                return;
+            }
+            errorMessage.style.display = "none"; // Hide error message
             loadingGui.style.display = "block";
             setTimeout(() => {
                 loadingGui.style.display = "none";
@@ -270,6 +269,9 @@
 
         // Automatically start the process when the page loads
         window.onload = autoTypeKeySystem;
+
+        // Add event listener to the submit button
+        submitButton.addEventListener("click", simulateKeySystem);
     </script>
 </body>
 </html>
