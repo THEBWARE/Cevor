@@ -137,11 +137,15 @@
         
         .hero-image {
             position: absolute;
-            right: 10%;
-            height: 80%;
+            right: 5%;
+            height: auto;
+            max-height: 80vh;
+            width: auto;
+            max-width: 50%;
             z-index: 1;
             filter: drop-shadow(0 20px 30px rgba(108, 92, 231, 0.3));
             animation: float 6s ease-in-out infinite;
+            object-fit: contain;
         }
         
         @keyframes float {
@@ -252,11 +256,19 @@
             font-size: 14px;
         }
         
+        @media (max-width: 1024px) {
+            .hero-image {
+                max-width: 45%;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
                 text-align: center;
                 padding-top: 150px;
+                height: auto;
+                padding-bottom: 80px;
             }
             
             .hero-content {
@@ -269,10 +281,35 @@
                 margin-top: 50px;
                 height: auto;
                 width: 80%;
+                max-width: 80%;
+                max-height: none;
             }
             
             .nav-links {
                 display: none;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .hero-image {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .section-title {
+                font-size: 28px;
             }
         }
     </style>
@@ -331,8 +368,6 @@
             <a href="#features">Features</a>
             <a href="#download">Download</a>
             <a href="https://discord.gg/fHVXHyKeBg" target="_blank">Discord</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
         </div>
         <div class="copyright">© 2025 Cevor. All rights reserved.</div>
     </footer>
