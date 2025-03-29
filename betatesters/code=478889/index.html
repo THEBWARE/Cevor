@@ -137,11 +137,13 @@
         
         .hero-image {
             position: absolute;
-            right: 10%;
-            height: 80%;
+            right: 5%; /* Adjusted to give more space */
+            height: 90%; /* Increased from 80% to 90% */
+            max-height: 800px; /* Added maximum height */
             z-index: 1;
             filter: drop-shadow(0 20px 30px rgba(108, 92, 231, 0.3));
             animation: float 6s ease-in-out infinite;
+            object-fit: contain; /* Ensures image maintains aspect ratio */
         }
         
         @keyframes float {
@@ -268,7 +270,9 @@
                 right: auto;
                 margin-top: 50px;
                 height: auto;
-                width: 80%;
+                width: 100%;
+                max-width: 500px;
+                max-height: none;
             }
             
             .nav-links {
@@ -295,7 +299,7 @@
             <p>Cevor is the ultimate Roblox scripting tool with unmatched features, performance, and reliability. Experience the power of next-generation exploiting with our intuitive interface and powerful execution capabilities.</p>
             <a href="#download" class="download-btn">Download Now</a>
         </div>
-        <img src="cevor.png" alt="Cevor Interface" class="hero-image">
+        <img src="https://cevor.vercel.app/betatesters/code=478889/cevor.png" alt="Cevor Interface" class="hero-image">
     </section>
     
     <section class="features" id="features">
@@ -322,17 +326,15 @@
     <section class="download-section" id="download">
         <h2 class="section-title">Ready to Experience Cevor?</h2>
         <p>Join thousands of users who have already unlocked the full potential of Roblox with Cevor.</p>
-        <a href=/Download class="download-btn">Download Now</a>
+        <a href="/download" class="download-btn">Download Now</a>
     </section>
     
     <footer>
         <div class="footer-logo">Cevor</div>
         <div class="footer-links">
             <a href="#features">Features</a>
-            <a href="#Download">Download</a>
+            <a href="#download">Download</a>
             <a href="https://discord.gg/fHVXHyKeBg" target="_blank">Discord</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
         </div>
         <div class="copyright">© 2025 Cevor. All rights reserved.</div>
     </footer>
