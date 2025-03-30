@@ -135,6 +135,24 @@
             box-shadow: 0 15px 30px rgba(108, 92, 231, 0.4);
         }
         
+        .source-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-left: 15px;
+        }
+        
+        .source-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
         .hero-image {
             position: absolute;
             right: 5%;
@@ -217,6 +235,12 @@
             margin-top: 30px;
         }
         
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
         footer {
             background: rgba(15, 15, 18, 0.8);
             padding: 50px 10%;
@@ -296,6 +320,16 @@
             .hero p {
                 font-size: 16px;
             }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .source-btn {
+                margin-left: 0;
+                margin-top: 15px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -311,6 +345,11 @@
             .section-title {
                 font-size: 28px;
             }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
@@ -323,6 +362,7 @@
             <a href="#features">Features</a>
             <a href="#download">Download</a>
             <a href="https://discord.gg/fHVXHyKeBg" target="_blank">Discord</a>
+            <a href="/Source">Source</a>
         </div>
     </nav>
     
@@ -330,7 +370,10 @@
         <div class="hero-content">
             <h2>The Most Powerful Roblox Executor</h2>
             <p>Cevor is the ultimate Roblox scripting tool with unmatched features, performance, and reliability. Experience the power of next-generation exploiting with our intuitive interface and powerful execution capabilities.</p>
-            <a href="#download" class="download-btn">Download Now</a>
+            <div class="btn-container">
+                <a href="#download" class="download-btn">Download Now</a>
+                <a href="/Source" class="source-btn">View Source</a>
+            </div>
         </div>
         <img src="https://cevor.vercel.app/cevor.png" alt="Cevor Interface" class="hero-image">
     </section>
@@ -359,7 +402,10 @@
     <section class="download-section" id="download">
         <h2 class="section-title">Ready to Experience Cevor?</h2>
         <p>Join thousands of users who have already unlocked the full potential of Roblox with Cevor.</p>
-        <a href="/Download" class="download-btn">Download Now</a>
+        <div class="btn-container">
+            <a href="/Download" class="download-btn">Download Now</a>
+            <a href="/Source" class="source-btn">View Source</a>
+        </div>
     </section>
     
     <footer>
@@ -368,6 +414,7 @@
             <a href="#features">Features</a>
             <a href="#download">Download</a>
             <a href="https://discord.gg/fHVXHyKeBg" target="_blank">Discord</a>
+            <a href="/Source">Source</a>
         </div>
         <div class="copyright">© 2025 Cevor. All rights reserved.</div>
     </footer>
